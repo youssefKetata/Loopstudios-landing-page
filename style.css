@@ -1,0 +1,124 @@
+:root {
+    --clr-primary-300: hsl(171, 66%, 44%);
+    --clr-primary-400: hsl(233, 100%, 69%);
+    --clr-neutral-400: hsl(210, 10%, 33%);
+    --clr-neutral-300: hsl(201, 11%, 66%);
+
+    --ff-primary: "Bai Jamjuree", sans-serif;
+
+    --fw-400: 400;
+    --fw-600: 600;
+
+    --fs-400: 1.125rem;
+
+    --main-padding-inline: 2rem;
+}
+
+/* css reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul,
+ol,
+a {
+
+    text-decoration: none;
+    padding: 0;
+    all: unset;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-400);
+    color: var(--clr-neutral-300);
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* end of css reset */
+/* style */
+header {
+    background-image: url("./images/desktop/image-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav>ul {
+    display: flex;
+    flex: end;
+}
+
+nav>.logo {
+    margin-right: auto;
+}
+
+
+@media(min-width: 768px) {
+    header {
+        background-image: url("./images/mobile/image-hero.jpg");
+    }
+}
